@@ -1,0 +1,48 @@
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zlab WEB</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<main>
+<div class="element" id="element1">
+<header>
+<nav>
+<div class="dropdown">
+<button id="saveFile">Dosya Kaydet</button>
+<div class="dropdown-content">
+<a onclick="pyapi()">zlab</a>
+<a onclick="pyapi2()">html</a>
+<a onclick="pyapi3()">exe</a>
+<a onclick="alert('Yakında gelecek İnşAllah 😉')">apk</a>
+</div>
+</div>
+<button id="openFile">Dosya Aç</button>
+<button class="run-button" id="runButton">Çalıştır</button>
+</nav>
+</header>
+<div id="editor-container">
+<textarea id="editor" placeholder="Kodunuzu buraya yazın..."></textarea>
+<ul class="suggestions" id="suggestions"></ul>
+</div>
+<div id="console-container">
+<pre id="consoleOutput"></pre>
+</div>
+</div>
+<div class="element" id="element2">
+<header>
+<nav>
+<h3 id="bas">Proje başlığı</h3>
+</nav>
+</header>
+<iframe id="iframet" srcdoc="&lt;p style='color: white;'&gt;Gui boş 😥&lt;/p&gt;" style="height: 100%; width: 100%"></iframe>
+</div>
+</main>
+</div>
+<script src="scripts.js"></script><ul class="suggestions"></ul>
+<ul class="suggestions"></ul>
+<ul class="suggestions"></ul>
+</body></html>

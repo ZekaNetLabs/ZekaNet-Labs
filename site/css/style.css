@@ -1,0 +1,207 @@
+body {
+    background-color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 0.7em 0.7em 0.7em 0.7em;
+    background-color: #f5f5f5;
+    color: #333333;
+    border-bottom: solid 2px black;
+}
+
+header img {
+    height: 5em;
+    opacity: 0.8;
+}
+
+header h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.25em;
+    font-size: 2.5rem;
+}
+
+.nav {
+    display: flex;
+    margin-left: 4.5rem;
+    padding: 1.4em 1.4em 1.4em 1.4em;
+}
+
+.nav a {
+    background-color: #a7a7a7;
+    color: black;
+    border-radius: 12.5px;
+    padding: 0.8em 0.8em 0.8em 0.8em;
+    margin: 0em 1em 0em 1em;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.nav a:hover {
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.imgbg {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 37rem;
+}
+
+.imgbg img {
+    margin-top: -11em;
+    opacity: 0.7;
+    width: 100%;
+}
+
+.imgbg-h1{
+    margin-left: 10%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 5em;
+    margin-top: -5.75em;
+}
+
+.imgbg-p {
+    width: 20em;
+    margin-left: 28%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    margin-top: -11em;
+}
+
+.imgbg-btn {
+    position: absolute;
+    background-color: #4d4d4d;
+    color: rgb(255, 255, 255);
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    font-size: 2rem;
+    margin-top: -4.5em;
+    margin-left: 45%;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.imgbg-btn:hover {
+    background-color: #242424;
+    color: white;
+}
+@media screen and (max-width: 800px) {
+    nav{
+        height: 3em;
+        background-color: #f5f5f5;
+        border-bottom: solid 2px black;
+        display: flex;
+        overflow-y: scroll;
+    }
+
+    nav a {
+        height: 1.25em;
+        text-decoration: none;
+        margin: 0.3em 0.3em 0.3em 0.3em;
+        color: white;
+        padding: 0.25em 0.25em 0.25em 0.25em;
+        border-radius: 5px;
+        background-color: #1d1d1d;
+    }
+
+    header {
+        border-bottom: none;
+        align-items: center;
+        padding: 0.5em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-left: 0.25em;
+        margin-right: auto;
+    }
+
+    header img {
+        width: 3em;
+        height: 3em;
+        margin-left: auto;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0em;
+        padding: 0.5em 0;
+    }
+
+    .nav a {
+        font-size: 0.75em;
+        margin: 0.25em 0;
+        padding: 0.5em;
+    }
+
+    .imgbg {
+        margin-top: 0em;
+        height: 20em;
+    }
+
+    .imgbg img {
+        opacity: 0.65;
+        width: 60em;
+        margin-left: -25em;
+        margin-top: 0em;
+    }
+
+    .imgbg-h1 {
+        z-index: 1;
+        margin-left: 1.5em;
+        font-size: 1rem;
+        margin-top: -13em;
+        position: relative;
+    }
+
+    .imgbg-p {
+        font-size: 1em;
+        margin-left: 0em;
+        width: auto;
+        position: relative;
+        margin-top: 1em;
+    }
+
+    .imgbg-btn {
+        font-size: 1em;
+        margin-left: 0em;
+        position: relative;
+        margin-top: 2em;
+    }
+
+    .menu {
+        width: 2.5em;
+        border: none;
+    }
+
+    .menu img {
+        border: none;
+        height: 2.5em;
+        width: 2.5em;
+    }
+
+    .menu button {
+        width: 2.5em;
+        border: none;
+    }
+
+    .sidemenu {
+        background-color: white;
+        z-index: 2;
+        padding: 0.3em 0.3em 0.3em 0.3em;
+        text-align: center;
+        background-color: #ffffff;
+        border: solid 1px black;
+        border-top: none;
+        border-right: none;
+    }
+}

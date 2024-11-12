@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazı Kopyalama</title>
+</head>
+<body>
+    <button onclick="copyText()">Kopyala</button>
+
+    <script>
+        function copyText() {
+            // Kopyalanacak yazıyı belirle
+            var textToCopy = "selam";
+
+            // Geçici bir metin alanı oluştur
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textToCopy;
+
+            // Metin alanını belgenin görünür kısmına ekle
+            document.body.appendChild(tempTextArea);
+
+            // Metin alanındaki yazıyı seç ve kopyala
+            tempTextArea.select();
+            document.execCommand("copy");
+
+            // Metin alanını belgeden kaldır
+            document.body.removeChild(tempTextArea);
+
+            // Kullanıcıya bildirim ver
+            alert("Yazı kopyalandı: " + textToCopy);
+        }
+    </script>
+</body>
+</html>

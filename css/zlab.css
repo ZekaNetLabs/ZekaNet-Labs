@@ -1,0 +1,318 @@
+* {
+    margin: 0em 0em 0em 0em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(186, 186, 186);
+}
+
+html {
+    background-color: #0d0d0d;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #080808, #2d2d2d);
+    height: 17em;
+    width: auto;
+    overflow: hidden;
+}
+
+.banner {
+    opacity: 0.3;
+    background-image: url(../pictures/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    left: 2%;
+    margin: auto;
+    margin-top: -15em;
+    position: absolute;
+    width: 14em;
+    height: 14em;
+}
+
+.maintitle {
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    margin: auto;
+    margin-top: -3em;
+    margin-left: 6.75em;
+}
+
+
+nav {
+    color: white;
+    background-color: rgb(29, 29, 29);
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.buttonnav {
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 0.25em;
+    height: 1.475em;
+    width: 10em;
+    font-size: 1.25em;
+    border: rgb(29, 29, 29) solid 0.01em;
+    transition: 0.1s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.buttonnav-l {
+    margin-left: auto;
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 0.25em;
+    height: 1.475em;
+    width: 10em;
+    font-size: 1.25em;
+    border: rgb(29, 29, 29) solid 0.01em;
+    transition: 0.1s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.buttonnav-r {
+    margin-right: auto;
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 0.25em;
+    height: 1.475em;
+    width: 10em;
+    font-size: 1.25em;
+    border: rgb(29, 29, 29) solid 0.01em;
+    transition: 0.1s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.buttonnav:hover {
+    color: rgb(255, 255, 255);
+    border-left: white solid 0.01em;
+    border-right: white solid 0.01em;
+    border-bottom: #353535 solid 0.01em;
+    border-top: #353535 solid 0.01em;
+    background-color: #353535;
+}
+
+.buttonnav-l:hover {
+    color: rgb(255, 255, 255);
+    border-left: white solid 0.01em;
+    border-right: white solid 0.01em;
+    border-bottom: #353535 solid 0.01em;
+    border-top: #353535 solid 0.01em;
+    background-color: #353535;
+}
+
+.buttonnav-r:hover {
+    color: rgb(255, 255, 255);
+    border-left: white solid 0.01em;
+    border-right: white solid 0.01em;
+    border-bottom: #353535 solid 0.01em;
+    border-top: #353535 solid 0.01em;
+    background-color: #353535;
+}
+hr {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #2d2d2d, #0f0f0f);
+    height: 0.1em;
+    border: none;
+}
+
+.headerimagesource {
+    font-size: medium;
+    left: 94%;
+    position: absolute;
+    color: rgb(0, 179, 255);
+    margin-top: -1.3em;
+}
+
+.disclaimercontainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+}
+
+.disclaimer {
+    margin-top: 1.25em;
+    text-align: center;
+    color: #00bfff;
+    font-size: 3.5em;
+}
+
+.subdisclaimer {
+    margin-top: 0.75em;
+    opacity: 0.9;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.dropdown {
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 0.36em;
+    height: 1.85em;
+    width: 10em;
+    font-size: 1em;
+    border: rgb(29, 29, 29) solid 0.01em;
+    transition: 0.1s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover {
+    color: rgb(255, 255, 255);
+    border-left: white solid 0.01em;
+    border-right: white solid 0.01em;
+    border-top: #353535 solid 0.01em;
+    background-color: #353535;
+}
+
+.dropdownbtn {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 0.3em;
+    height: 100%;
+    width: 100%;
+    font-size: 1.25em;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    margin-top: 0.41em;
+    width: 100%;
+    margin-left: -0.05em;
+    display: none;
+    position: absolute;
+    background-color: #353535;
+    z-index: 1;
+    border-left: white solid 0.01em;
+    border-right: white solid 0.01em;
+    border-bottom: white solid 0.01em;
+}
+
+.dropdown-content a {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    display: block;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: white;
+    transition: 0.1s;
+}
+
+.dropdown-content a:hover{
+    color: #0260d2;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+main {
+    padding: 2em;
+}
+
+.project-intro {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.project-intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12.5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-intro h1 {
+    margin: 1em 0;
+    font-size: 2.5em;
+}
+
+.project-intro p {
+    font-size: 1.2em;
+    color: rgb(186, 186, 186);
+}
+
+.project-details {
+    margin-top: 2em;
+}
+
+.project-details h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.project-details p, .project-details ul {
+    font-size: 1.2em;
+    color: rgb(186, 186, 186);;
+    margin-bottom: 1em;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.project-details ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-intro h1 {
+        font-size: 2em;
+    }
+
+    .project-details h2 {
+        font-size: 1.5em;
+    }
+
+    .project-details p, .project-details ul {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+        padding: 0.7em;
+    }
+
+    .nav a {
+        margin: 0.5em 0.5em;
+    }
+}

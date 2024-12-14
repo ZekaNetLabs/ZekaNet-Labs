@@ -27,12 +27,47 @@
   <link rel="alternate" hreflang="tr" href="https://rpd-community.com/tr/index.htm">
   <link rel="alternate" hreflang="ru" href="https://rpd-community.com/ru/index.htm">
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <style>
+    /* Modal arka plan stili */
+    .modal {
+        display: none; /* Başlangıçta gizli */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Saydam siyah arka plan */
+        justify-content: center;
+        align-items: center;
+    }
+    /* Modal içeriği stili */
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+    }
+    .close-btn {
+        background-color: crimson;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .close-btn:hover {
+        background-color: darkred;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="banner"></div>
     <img src="pictures/easlogo.png" class="logo" alt="RPD- Restricted Phenomena Database">
-    <h2 class="maintitle" id="subtitle">Yazılım Geliştirme Ekibi</h1>
+    <h2 class="maintitle" id="subtitle">Yazılım Geliştirme Ekibi</h2>
     <h1 class="maintitle" id="maintitle" style="margin-top: -3em; font-size: 4rem; margin-left: 4.2em;">ZekaNet Labs</h1>
     <a target="_blank" rel="noopener noreferrer" class="headerimagesource" href="https://www.pexels.com/photo/black-server-racks-on-a-room-325229/"></a>
   </header>
@@ -60,12 +95,46 @@
   </nav>
   <hr style="background-image: linear-gradient(to top, #2d2d2d, #0f0f0f);">
   <div class="disclaimercontainer">
-    <p class="disclaimer"><b>Milli Programlama Dili!</b></h1><br>
+    <p class="disclaimer"><b>Milli Programlama Dili!</b><br>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/KxmJekfmEhs?si=HKoAh_FaBIELTiqc" title="ZekaNet Labs Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p class="subdisclaimer">Ekibimizin binbir emeği sonucunda ortaya çıkan, en yeni projemiz <b>ZLab</b> ile tanışın! ZLab programlama dili kolay okunabilir ve yazılabilir olması sayesinde uygulamalarınızı daha hızlı geiştirebileceksiniz.</h1><br><br>
+    <p class="subdisclaimer">Ekibimizin binbir emeği sonucunda ortaya çıkan, en yeni projemiz <b>ZLab</b> ile tanışın! ZLab programlama dili kolay okunabilir ve yazılabilir olması sayesinde uygulamalarınızı daha hızlı geliştirebileceksiniz.</p><br><br>
     <a href="zlab.htm" class="projesayfasi"><b>Proje Sayfası</b></a>
   </div>
   <br>
-  <script src="script.js"></script>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+        <h2>Hoş Geldiniz!</h2>
+        <p>ZekaNet Labs Gönüllü Geliştirici Ekibine Girmek İçin Formu Doldurunuz.</p>
+        
+        <a href="https://forms.gle/qqT1ad3tbxZZsXoQ8" target="_blank" class="buttonform">Formu Doldur</a>
+        <p></p>
+      <button class="close-btn" id="closeModal">Kapat</button>
+    </div>
+  </div>
+
+  <script>
+    // Modal öğelerini seç
+    const modal = document.getElementById("myModal");
+    const closeModalBtn = document.getElementById("closeModal");
+
+    // Sayfa yüklendiğinde popup göster
+    window.onload = () => {
+        modal.style.display = "flex";
+    };
+
+    // Popup kapat butonu
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Modal dışına tıklandığında kapat
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,361 @@
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<title>Zlab WEB</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<main>
+<div class="element" id="element1">
+<header>
+<nav>
+<div class="dropdown">
+<button id="saveFile">Dosya Kaydet</button>
+<div class="dropdown-content">
+<a onclick="pyapi()">zlab</a>
+<a onclick="pyapi2()">html</a>
+<a onclick="pyapi3()">exe</a>
+<a onclick="alert('Yakında gelecek İnşAllah 😉')">apk</a>
+</div>
+</div>
+<button id="openFile">Dosya Aç</button>
+<button class="run-button" id="runButton">Çalıştır</button>
+</nav>
+</header>
+<div id="editor-container">
+<textarea id="editor" placeholder="Kodunuzu buraya yazın...">::Yorum satırları
+
+
+
+:: Yorum satırları burada görüldüğü gibi yazılır. "::" yazdıktan sonra istediğiğiniz yazıyı yazabilirsiniz
+
+
+
+:: Yazdırma ve Değişkenler komudu
+
+
+
+yazdır "Merhaba" 
+
+:: Burada tırnak işareti (") içindeki yazı yazdırılır
+
+
+
+yazdır 100 + 50 
+
+:: Burada matamatik işlemi yapılabilir. 4 işlemi de yapabilirsiniz
+
+
+
+değişken = 100.7 
+
+:: Burada değişkene ad verilir ve = koyup değişkene değer verilir. (int, float, str)
+
+
+
+yazdır değişken 
+
+:: Burada değişken yazdırılır
+
+
+
+a = 50
+
+b = 100
+
+yazdır a / b 
+
+:: Burada a ve b değişkenine değer verdik ve onları matamatik işlemi ile yazdırdık
+
+
+
+:: Al komudu
+
+
+
+al isim "Lütfen isminizi girin" 
+
+::Burada bir değişkene "al" komudunu verdik ve sormak istediğimiz soruyu yazdık. Yazdığımız cevabı verdiğimiz değişkene kaydedicek.
+
+yazdır isim 
+
+:: Burada yukarıda sorduğumuz değişkeni yazdırıyor
+
+
+:: Döngü 
+
+döngü 3:
+yazdır "ZekaNet Labs"
+bırak
+
+:: Kullanımı
+:: döngü &lt;sayı&gt;:
+:: &lt;kod&gt;
+:: bırak
+
+:: Sayı kadar kodu döngüde çalıştırır
+
+
+
+:: GUI komutları
+
+
+
+:: Pencere
+
+
+
+pencere Zlab
+
+:: Burada "Zlab" adında pencere oluşturduk. Tüm GUI görüntülenmesi sağ tarafta gözükecektir
+
+
+
+
+
+:: Buton
+
+buton "Buraya butonun yazısını yazacaksınız"
+
+
+
+:: Yazı
+
+yazı "Buraya yazmak istediğiniz yazıyı yazacaksınız"
+
+
+
+:: Html
+
+html "&lt;h1&gt;Buraya html kodunuzu yazıcaksınız&lt;/h1&gt;"
+
+
+
+:: Giriş 
+
+giriş
+
+:: Burada ekrana yazı yazabileceğimiz bir yer eklendi
+
+
+
+:: Takvim
+
+
+
+takvim
+
+:: Burada ekrana takvim görüntülenmesi eklendi
+
+
+
+:: Tik
+
+
+
+tik "Örnek: Lütfen EULA'yı kabul edin. Gibi onay isteyen şeyler yazılabilir"
+
+
+
+:: Renk
+
+
+
+renk
+
+:: Burada renk seçebilirsiniz
+
+
+
+
+
+
+
+
+
+:: Zlab aşkıyla ©️2024
+
+</textarea>
+<ul class="suggestions" id="suggestions"></ul>
+</div>
+<div id="console-container">
+<pre id="consoleOutput"></pre>
+</div>
+</div>
+<div class="element" id="element2">
+<header>
+<nav>
+<h3 id="bas">Proje başlığı</h3>
+</nav>
+</header>
+<iframe id="iframet" srcdoc="&lt;html lang=&quot;tr&quot;&gt;&lt;head&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+
+    &lt;title&gt;Zlab&lt;/title&gt;
+
+    &lt;style&gt;
+
+    /* CSS */
+
+*{
+
+margin:5px;
+
+}
+
+body{
+
+    background-color:#1e1e1e;
+
+}
+
+button {
+
+  appearance: button;
+
+  backface-visibility: hidden;
+
+  background-color: #405cf5;
+
+  border-radius: 6px;
+
+  border-width: 0;
+
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+
+  box-sizing: border-box;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: -apple-system,system-ui,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Ubuntu,sans-serif;
+
+  font-size: 100%;
+
+  height: 44px;
+
+  line-height: 1.15;
+
+  margin: 12px 0 0;
+
+  outline: none;
+
+  overflow: hidden;
+
+  padding: 0 25px;
+
+  position: relative;
+
+  text-align: center;
+
+  text-transform: none;
+
+  transform: translateZ(0);
+
+  transition: all .2s,box-shadow .08s ease-in;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
+  touch-action: manipulation;
+
+  width: 100%;
+
+}
+
+
+
+button:disabled {
+
+  cursor: default;
+
+}
+
+
+
+button:focus {
+
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+
+}
+
+#input{
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  vertical-align: baseline;
+
+  font-weight: 400;
+
+  line-height: 1.29;
+
+  letter-spacing: .16px;
+
+  border-radius: 0;
+
+  outline: 2px solid transparent;
+
+  outline-offset: -2px;
+
+  width: 100%;
+
+  height: 40px;
+
+  border: none;
+
+  border-bottom: 1px solid #8d8d8d;
+
+  background-color: #f4f4f4;
+
+  padding: 0 16px;
+
+  color: #161616;
+
+  transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);
+
+  }  
+
+  #input:focus{
+
+      outline: 2px solid #0f62fe;
+
+      outline-offset: -2px;
+
+  }
+
+    &lt;/style&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;main&gt;
+
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Buraya butonun yazısını yazacaksınız&lt;/button&gt;&lt;p class=&quot;text-center&quot; style=&quot;color: white;&quot;&gt;Buraya yazmak istediğiniz yazıyı yazacaksınız&lt;/p&gt;&lt;h1&gt;Buraya html kodunuzu yazıcaksınız&lt;/h1&gt;&lt;input type=&quot;text&quot; id=&quot;input&quot;&gt;&lt;input type=&quot;date&quot;&gt;&lt;input type=&quot;checkbox&quot; style=&quot;color: white;&quot;&gt;Örnek: Lütfen EULA'yı kabul edin. Gibi onay isteyen şeyler yazılabilir&lt;input type=&quot;color&quot;&gt; 
+
+    &lt;/main&gt;
+
+  
+
+
+
+            &lt;/body&gt;&lt;/html&gt;" style="height: 100%; width: 100%"></iframe>
+</div>
+</main>
+</div>
+<script src="scripts.js"></script><ul class="suggestions"></ul>
+<ul class="suggestions"></ul>
+<ul class="suggestions"></ul>
+</body></html>
